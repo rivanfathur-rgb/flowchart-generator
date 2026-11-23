@@ -2,7 +2,30 @@
 
 Mengubah kode C++ menjadi flowchart secara otomatis. Programnya membaca kode lewat parser [tree-sitter](https://tree-sitter.github.io/) dan menghasilkan file `.drawio` yang bisa dibuka dan diedit di [draw.io](https://app.diagrams.net).
 
-![Contoh hasil flowchart](docs/contoh-hasil.png)
+<details>
+<summary>Lihat contoh hasil flowchart</summary>
+
+<p align="center">
+  <img src="docs/contoh-hasil-1.png" alt="Contoh hasil flowchart, bagian 1" width="90%">
+</p>
+
+<p align="center">
+  <img src="docs/contoh-hasil-2.png" alt="Contoh hasil flowchart, bagian 2" width="30%">
+</p>
+
+<p align="center"><em>Flowchart dari <code>examples/input.cpp</code>, dipotong dua bagian agar muat. File lengkapnya ada di <code>examples/hasil.drawio</code>.</em></p>
+
+</details>
+
+## Latar belakang
+
+Memahami alur program dan membayangkannya dalam bentuk flowchart sebenarnya bukan hal yang sulit, apalagi kalau sudah terbiasa membaca logika kode. Kita bisa saja menyusunnya secara manual, menentukan proses, percabangan, hingga alur setiap instruksi.
+
+Namun, ada satu hal yang perlu dipertimbangkan: `waktu brooww`
+
+Ketika logika program sudah jelas, menghabiskan waktu untuk memindahkan setiap proses ke simbol flowchart secara manual terasa kurang efisien. Terlebih ketika ada perubahan kode yang mengharuskan flowchart diperbarui kembali.
+
+Dari situ, project ini dibuat.
 
 ## Fitur
 
@@ -56,6 +79,7 @@ Edit tabel di bagian "TABEL GAYA" pada `flow.py`: `BENTUK`, `UKURAN`, `WARNA_BEN
 
 ## Keterbatasan
 
+- Flowchart hasil masih harus `disesuaikan manual` untuk beberapa kasus kode kompleks
 - `do-while`, `switch`, `break`, dan `continue` belum ditangani khusus, jadi ditampilkan sebagai kotak proses biasa
 - Nama file hasil selalu `hasil.drawio`
 
@@ -69,7 +93,8 @@ Edit tabel di bagian "TABEL GAYA" pada `flow.py`: `BENTUK`, `UKURAN`, `WARNA_BEN
 │   ├── input.cpp
 │   └── hasil.drawio
 ├── docs/
-│   └── contoh-hasil.png
+│   ├── contoh-hasil-1.png
+│   └── contoh-hasil-2.png
 └── LICENSE
 ```
 

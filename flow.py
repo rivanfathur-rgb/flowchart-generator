@@ -8,6 +8,7 @@ bahasa = Language(tscpp.language())
 parser = Parser(bahasa)
 
 nama_input = sys.argv[1] if len(sys.argv) > 1 else "input.cpp"
+nama_output = sys.argv[2] if len(sys.argv) > 2 else "hasil.drawio"
 kode = open(nama_input, "rb").read()
 pohon = parser.parse(kode)
 
@@ -441,5 +442,5 @@ xml = (
     '<mxGraphModel><root>' + "".join(sel) + '</root></mxGraphModel>'
     '</diagram></mxfile>'
 )
-open("hasil.drawio", "w", encoding="utf-8").write(xml)
-print("File hasil.drawio sudah dibuat")
+open(nama_output, "w", encoding="utf-8").write(xml)
+print(f"File {nama_output} sudah dibuat")

@@ -57,9 +57,15 @@ python flow.py examples/input.cpp
 
 (Di Linux atau macOS, pakai `python3 -m venv .venv` dan aktifkan dengan `source .venv/bin/activate`.)
 
-Hasilnya disimpan di `hasil.drawio` pada folder tempat kamu menjalankan perintah. Jika tidak diberi nama file, program membaca `input.cpp` di folder yang sama.
+Hasilnya disimpan di `hasil.drawio` pada folder tempat kamu menjalankan perintah. Jika tidak diberi nama file input, program membaca `input.cpp` di folder yang sama.
 
-Untuk membuka hasilnya: buka [app.diagrams.net](https://app.diagrams.net), pilih **File → Open from → Device**, lalu pilih `hasil.drawio`. Dari sana flowchart bisa diedit atau diekspor ke PNG, SVG, atau PDF.
+Argumen kedua (opsional) adalah nama file hasil:
+
+```
+python flow.py examples/input.cpp hasil-saya.drawio
+```
+
+Untuk membuka hasilnya: buka [app.diagrams.net](https://app.diagrams.net), pilih **File → Open from → Device**, lalu pilih file hasilnya. Dari sana flowchart bisa diedit atau diekspor ke PNG, SVG, atau PDF.
 
 ## Contoh
 
@@ -83,7 +89,6 @@ Edit tabel di bagian "TABEL GAYA" pada `flow.py`: `BENTUK`, `UKURAN`, `WARNA_BEN
 
 - Flowchart hasil masih harus `disesuaikan manual` untuk beberapa kasus kode kompleks
 - `do-while`, `switch`, `break`, dan `continue` belum ditangani khusus, jadi ditampilkan sebagai kotak proses biasa
-- Nama file hasil selalu `hasil.drawio`
 
 ## Struktur Proyek
 

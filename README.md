@@ -39,21 +39,23 @@ Dari situ, project ini dibuat.
 
 ## Kebutuhan
 
-- Python 3
+- Python 3.12 dari [python.org](https://www.python.org/downloads/) (versi yang sudah diuji, di Windows)
 - Paket di `requirements.txt` (`tree-sitter` dan `tree-sitter-cpp`)
+
+> **Catatan Windows:** gunakan Python resmi dari python.org, bukan Python bawaan MSYS2. Dengan Python MSYS2, `pip` tidak menemukan paket siap pakai dan mencoba mengompilasi `tree-sitter-cpp` dari source, lalu gagal.
 
 ## Cara Pakai
 
 ```
 git clone https://github.com/rivanfathur-rgb/flowchart-generator.git
 cd flowchart-generator
-python -m venv .venv
+py -3.12 -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 python flow.py examples/input.cpp
 ```
 
-(Di Linux atau macOS, aktifkan venv dengan `source .venv/bin/activate`.)
+(Di Linux atau macOS, pakai `python3 -m venv .venv` dan aktifkan dengan `source .venv/bin/activate`.)
 
 Hasilnya disimpan di `hasil.drawio` pada folder tempat kamu menjalankan perintah. Jika tidak diberi nama file, program membaca `input.cpp` di folder yang sama.
 

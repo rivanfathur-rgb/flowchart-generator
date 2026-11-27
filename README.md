@@ -50,10 +50,12 @@ Dari situ, project ini dibuat.
 git clone https://github.com/rivanfathur-rgb/flowchart-generator.git
 cd flowchart-generator
 py -3.12 -m venv .venv
-.venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python flow.py examples/input.cpp
 ```
+
+Di Command Prompt (cmd), aktivasinya `.venv\Scripts\activate`. Kalau PowerShell menolak menjalankan skrip aktivasi, jalankan dulu `Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned`.
 
 (Di Linux atau macOS, pakai `python3 -m venv .venv` dan aktifkan dengan `source .venv/bin/activate`.)
 
